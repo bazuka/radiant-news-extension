@@ -1,42 +1,117 @@
 ---
 en:
-  # Menu
-  news_header: "News"
-  news_entries: "News Entries"
-  news_categories: "News Category"
-  news_tags: "News Tags"
-  news_galleries: "Galleries"
-  news_gallery_images: "Gallery Images"
-  news_videos: "Videos"
 
-  # news
-  news_add: "Add New News"
-  news_button_remove: "Remove News"
-  news_form_label_ante_headline: "Ante-headline"
-  news_form_label_categories: "Categories"
-  news_form_label_headline: "Headline"
-  news_form_label_lead: "Lead Text"
-  news_form_label_gallery: "Gallery"
-  news_form_label_video: 'Video'
-  news_form_label_photo_lead_text: 'Lead text image'
-  news_form_label_photo_text: "Text image"
-  news_form_label_start: "Start"
-  news_form_label_stop: "End"
-  news_form_label_tags: "Tags (separated by comma)"
-  news_form_label_text: "Text"
-  news_form_photo_text_caption: 'Text image caption'
-  news_index_title: "News"
-  news_list_empty: "No news in database"
-  news_list_name: "Name"
-  news_list_start: "Start"
-  news_remove_message: 'Are you sure you want to <strong class="warning">permanently remove</strong> the following news?'
-  news_remove_title: "Remove News"
-  news_search_category_select: "All Categories"
-  news_search_label_category: "Category"  
-  news_search_label_headline: "Headline"  
-  news_title_edit: "Edit"
-  news_title_new: "New News"
+  news_document: 'Documents'
+  news_gallery_image: 'Image'
+  news_folder: 'Folder'
+  news_video: 'Video'
   
+  activerecord:
+    models:
+      gallery_items: 'Images'
+      news_document_authors: 'Authors of documents'
+      news_folders: 'Folder'
+    attributes:
+      gallery_item:
+        description: 'Description'
+        news_folder_id: 'Name of gallery'
+        photo: 'Image'
+        small_title: 'Title of thumbnail'
+        small_description: 'Description of thumbnail'
+        title: 'Title'
+      news_document:
+        authors: 'Authors'
+        description: 'Description'
+        date: 'Date'
+        document: 'Document'
+        title: 'Title'
+      news_entry:
+        ante_headline: "Ante-headline"
+        categories: "Categories"
+        headline: "Headline"
+        leadtext: "Leadtext"
+        news_document_id: "Document"
+        news_gallery_image_id: "Gallery"
+        news_video_id: "Video"
+        gallery: "Galerry"
+        photo_lead: 'Lead text image'
+        photo_text: "Text image"
+        photo_text_caption: 'Image caption text'
+        start: "Start"
+        stop: "Stop"
+        tags: "Tags (separated by comma)"
+        text: "Text"
+      news_gallery_image:
+        description: 'Description'
+        news_folder_id: 'Gallery'
+        photo: 'Image'
+        small_title: 'Title of thumbnail'
+        small_description: 'Description of thumbnail'
+        title: 'Title'
+        
+  news:
+  # Menu
+    menu:
+      header: "News "
+      head: "News "
+      entries: "News Entries"
+      categories: "News Category"
+      tags: "News Tags"
+      galleries: "Galleries"
+      gallery: "Gallery"
+      gallery_images: "Gallery Images"
+      videos: "Videos"
+      folders: 'Folders'
+      documents: 'Documents'
+    documents:      
+      buttons:
+        add: 'Add Document'
+        remove: 'Remove Document'
+      list:        
+        title: 'Title'
+        empty: 'No Documents in database'
+      messages:
+        remove: 'Are you sure you want to <strong class="warning">permanently remove</strong> the following document?'
+      title:
+        edit: 'Edit Document'
+        new: 'New Document'
+        remove: 'Remove Document'
+    galleries:
+      items:
+        buttons:
+          add: 'Add Image'
+          remove: 'Remove Image'       
+        list:
+          description: 'Description'
+          gallery: 'Gallery'
+          empty: 'No Images found'
+        messages:
+          remove: 'Are you sure you want to <strong class="warning">permanently remove</strong> the following message?'
+        title:
+          edit: 'Edit Images'
+          new: 'New Images'
+          remove: 'Remove Images'
+    news_entry:
+      buttons:
+        add: "Add News Article"
+        filter: "Filter"
+        remove: "Remove Article"
+      list:
+        empty: "No News Found"
+        name: "Name"
+        start: "Start"
+      messages:
+          remove: 'Are you sure you want to <strong class="warning">permanently remove</strong> the following message?'
+      search:
+        category: "Category"
+        category_select: "All categories"
+        headline: "Title"
+      title:
+          edit: 'Edit Article'
+          new: 'New Article'
+          remove: 'Remove Article'
+    news_gallery_image:
+
   # categories
   news_categories_index_title: "Categories"
   news_categories_list_empty: "No categories in database"
@@ -49,7 +124,8 @@ en:
   news_category_remove_message: 'Are you sure you want to <strong class="warning">permanently remove</strong> the following category?'
   news_category_button_remove: "Remove Category"
 
-  # Gallery
+  
+   # Gallery
   news_gallery_add: "Add gallery"
   news_gallery_button_remove: "Remove gallery"
   news_gallery_remove_title: "Remove galery"
@@ -58,29 +134,55 @@ en:
   news_gallery_list_name: "Name"
   news_gallery_form_label_name: "Name"
   news_gallery_title_edit: "Edit"
-  news_gallery_title_new: "New gallery"
-  
-  # Gallery items
-  news_gallery_add: "Add image"
-  news_gallery_item_button_remove: "Remove image"
-  news_gallery_item_form_label_description: "Title"
-  news_gallery_item_form_label_gallery: "Gallery"
-  news_gallery_item_form_label_photo: "Image"
-  news_gallery_item_list_description: "Title"
-  news_gallery_item_list_empty: 'No images in database'
-  news_gallery_item_list_gallery: "Gallery"
-  news_gallery_item_remove_title: 'Remove image'
-  news_gallery_item_remove_message: 'Are you sure you want to <strong class="warning">permanently remove</strong> the following image?'
-  news_gallery_item_title_new: "Add image to gallery"
- 
-  # tags
+  news_gallery_title_new: "New gallery"  
+
+   # Folders
+  news_folder_add: "Add gallery"
+  news_folder_button_remove: "Remove gallery"
+  news_folder_remove_title: "Remove galery"
+  news_folder_remove_message: 'Are you sure you want to <strong class="warning">permanently remove</strong> the following gallery?'
+  news_folder_list_empty: 'No galleries in database'
+  news_folder_list_name: "Name"
+  news_folder_form_label_name: "Name"
+  news_folder_title_edit: "Edit"
+  news_folder_title_new: "New gallery"  
+
+
+  #videos
+  news_video_add: "Add Video"
+  news_video_button_remove: "Remove Video"
+  news_video_remove_title: "Remove Video"
+  news_video_remove_message: 'Are you sure you want to <strong class="warning">permanently remove</strong> the following video?'  
+  news_video_list_empty: 'Não existem videos registados'
+  news_video_list_title: "Title"
+  news_video_form_label_title: "Title"
+  news_video_form_label_ante_title: "Antetítulo"
+  news_video_form_label_description: "Descrição"
+  news_video_form_label_video_url: "Endereço do vídeo"
+  news_video_title_edit: "Editar"
+  news_video_title_new: "Novo vídeo"
+
+  news_document_folder_index_title: "Documents"
+  news_document_folder_list_empty: "No Documents found"
+  news_document_folder_list_name: "Name"
+  news_document_folder_add: "Add New documents folder"
+  news_document_folder_title_new: "New document"
+  news_document_folder_title_edit: "Edit"
+  news_document_folder_form_label_name: "Name"  
+  news_document_folder_remove_title: "Remove document"
+  news_document_folder_remove_message:  'Are you sure you want to <strong class="warning">permanently remove</strong> the following document?'  
+  news_document_folder_button_remove: "Remove document"
+
+   # tags
   news_tags_index_title: "Tags"
   news_tags_list_empty: "No tags in database"
   news_tags_list_name: "Name"
   news_tags_add: "Add New Tag"
   news_tags_title_new: "New Tag"
   news_tags_title_edit: "Edit"
+  news_tag_title_edit: "Edit"
   news_tags_form_label_name: "Name"  
+  news_tag_form_label_name: "Name"  
   news_tags_remove_title: "Remove Tag"
   news_tags_remove_message: 'Are you sure you want to <strong class="warning">permanently remove</strong> the following tag?'
   news_tags_button_remove: "Remove Tag"
